@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Linkedin, Github, Twitter, Mail } from 'lucide-react';
 import { Input } from '@/app/components/ui/input';
 import { Textarea } from '@/app/components/ui/textarea';
 import emailjs from '@emailjs/browser';
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = 'service_mi3mx5g';
+const EMAILJS_TEMPLATE_ID = 'template_6y079dm';
+const EMAILJS_PUBLIC_KEY = '_JfgJP5HCei5ujy0l';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -15,6 +20,11 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -23,15 +33,14 @@ export function Contact() {
     try {
       // Send email using EmailJS
       await emailjs.send(
-        'service_mi3mx5g', // Service ID
-        'template_6y079dm', // Template ID
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
-        },
-        '_JfgJP5HCei5ujy0l' // Public Key
+        }
       );
 
       setSubmitStatus('success');

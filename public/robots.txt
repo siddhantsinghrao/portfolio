@@ -1,0 +1,24 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+User-agent: *
+Allow: /favicon-16x16.png
+
+User-agent: *
+Allow: /favicon-32x32.png
+
+
+User-agent: *
+Allow: /favicon.ico

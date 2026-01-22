@@ -61,7 +61,7 @@ export function Hero() {
           <div className="relative">
             <div className="relative bg-[#B8B8B8] rounded-lg overflow-hidden aspect-square max-w-[400px] mx-auto lg:ml-auto">
               <img
-                src="../../src/assets/60f3e8b154d0b81a9d295a3ba396dbde67a8f13a.png"
+                src="/siddhant.png"
                 alt="Siddhant Singh Rao"
                 className="w-full h-full object-cover"
               />

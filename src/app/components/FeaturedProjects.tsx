@@ -1,3 +1,4 @@
+import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 interface ProjectProps {
@@ -117,9 +118,7 @@ export function FeaturedProjects() {
       role: 'Stack of AI',
       year: '2025',
       tags: ['AI Analytics', 'AI Chatbot', 'AI Calling Agent'],
-      image:
-        // 'https://samplelib.com/lib/preview/png/sample-bumblebee-400x300.png',
-        '../../src/assets/bccb90f8c4203b5ec113352ec9459d021bd9ff98.png',
+      image: '/cognus.png',
       liveUrl: 'https://www.cognustechnology.com/',
     },
     {
@@ -129,9 +128,7 @@ export function FeaturedProjects() {
       role: 'AI-Driven EdTech Platform',
       year: '2025',
       tags: ['AI Analytics', 'AI Chatbot', 'AI Calling Agent'],
-      image:
-        // 'https://samplelib.com/lib/preview/png/sample-bumblebee-400x300.png',
-        'https://i.ibb.co/YTQfJdw3/5d04433138b8d7a601804fb888065e8f6b20473d.png',
+      image: '/gradding.png',
       liveUrl: 'https://www.gradding.com/',
     },
     {
@@ -145,9 +142,7 @@ export function FeaturedProjects() {
         'Market Analysis',
         'Trading Signals',
       ],
-      image:
-        // 'https://samplelib.com/lib/preview/png/sample-bumblebee-400x300.png',
-        '../../src/assets/5d04433138b8d7a601804fb888065e8f6b20473d.png',
+      image: '/moneyscalper.png',
 
       liveUrl: 'https://www.moneyscalper.com/',
     },
